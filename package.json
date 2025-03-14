@@ -1,6 +1,6 @@
 {
-  "name": "pronouncing",
-  "version": "0.0.1",
+  "name": "@testudy/pronouncing",
+  "version": "0.1.0",
   "description": "a simple interface to the CMU pronouncing dictionary",
   "author": "Allison Parrish <allison@decontextualize.com>",
   "scripts": {
