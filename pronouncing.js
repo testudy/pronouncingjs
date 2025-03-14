@@ -57,11 +57,12 @@ function rhymingPart(phones) {
  */
 function search(pattern) {
   var matches = [];
+  var re;
   if (pattern instanceof RegExp) {
-      re = pattern;
+    re = pattern;
   }
   else {
-    var re = new RegExp("\\b" + pattern + "\\b");
+    re = new RegExp("\\b" + pattern + "\\b");
   }
   _.each(pronunciations, function(item) {
     var word = item[0];
