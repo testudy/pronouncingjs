@@ -33,6 +33,12 @@ test('phones for word', function(t) {
     t.end();
 });
 
+test('syllable for word', function(t) {
+    var syllables = pronouncing.syllablesForWord("example");
+    t.deepEqual(syllables, ['ex', 'am', 'ple']);
+    t.end();
+});
+
 test('rhyming part', function(t) {
     var part = pronouncing.rhymingPart("S L IY1 P ER0")
     t.equal(part, "IY1 P ER0")

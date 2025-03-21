@@ -159,6 +159,18 @@ function stressesForWord(find) {
   return _.map(phones, stresses);
 }
 
+/**
+ * Get the syllables for a given word.
+ *
+ * @param {string} find - A word to find
+ * @returns {Array} A list of syllables for the given word.
+ */
+function syllablesForWord(find) {
+  var phones = phonesForWord(find);
+  return [];
+}
+
+
 module.exports = {
   parseCMU: parseCMU,
   syllableCount: syllableCount,
@@ -168,5 +180,6 @@ module.exports = {
   rhymes: rhymes,
   stresses: stresses,
   stressesForWord: stressesForWord,
-  searchStresses: searchStresses
+  searchStresses: searchStresses,
+  syllablesForWord: syllablesForWord,
 };
