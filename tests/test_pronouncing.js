@@ -4,7 +4,7 @@ var pronouncing = require('../pronouncing.js');
 var _ = require('underscore');
 
 test('parse cmu dictionary', function(t) {
-    var testData = 
+    var testData =
 ";;; some test data to ensure that parsing CMU-formatted files works\n" +
 "ADOLESCENT  AE2 D AH0 L EH1 S AH0 N T\n" +
 "ADOLESCENT(1)  AE2 D OW0 L EH1 S AH0 N T\n";
@@ -38,6 +38,8 @@ test('rhyming part', function(t) {
     t.equal(part, "IY1 P ER0")
     part = pronouncing.rhymingPart("S L IY1 P AH0 L IY0")
     t.equal(part, "IY1 P AH0 L IY0")
+    part = pronouncing.rhymingPart("K AA1 N F AW2 N D")
+    t.equal(part, "AW2 N D")
     t.end();
 });
 
