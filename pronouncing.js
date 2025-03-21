@@ -148,6 +148,16 @@ function stresses(s) {
   return s.replace(/[^012]/g, "");
 }
 
+/**
+ * Get a list of possible stress patterns for a given word.
+ *
+ * @param {string} find - A word to find
+ * @returns {Array} A list of possible stress patterns for the given word.
+ */
+function stressesForWord(find) {
+  var phones = phonesForWord(find);
+  return _.map(phones, stresses);
+}
 
 module.exports = {
   parseCMU: parseCMU,
@@ -157,5 +167,6 @@ module.exports = {
   search: search,
   rhymes: rhymes,
   stresses: stresses,
+  stressesForWord: stressesForWord,
   searchStresses: searchStresses
 };

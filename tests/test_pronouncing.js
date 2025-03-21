@@ -76,6 +76,12 @@ test('stresses', function(t) {
     t.end();
 });
 
+test('stresses for word', function(t) {
+    var stresses = pronouncing.stressesForWord('conflicts');
+    t.deepEqual(stresses, ['01', '10', '01', '10']);
+    t.end();
+});
+
 test('search stresses', function(t) {
     var words = pronouncing.searchStresses('^000100$');
     t.deepEqual(words,
