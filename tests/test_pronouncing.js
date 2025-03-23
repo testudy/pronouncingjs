@@ -35,7 +35,18 @@ test('phones for word', function(t) {
 
 test('syllable for word', function(t) {
     var syllables = pronouncing.syllablesForWord("example");
-    t.deepEqual(syllables, ['ex', 'am', 'ple']);
+    t.deepEqual(syllables, [
+        ['ex', 'IH0 G Z'],
+        ['am', 'AE1 M'],
+        ['ple', 'P AH0 L'],
+    ]);
+
+    syllables = pronouncing.syllablesForWord("dad");
+    t.deepEqual(syllables, [
+        ['da', 'D AE1'],
+        ['d', 'D'],
+    ]);
+
     t.end();
 });
 

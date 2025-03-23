@@ -16,8 +16,24 @@ function parseCMU(str) {
   return pronunciations;
 }
 
+function parseCMULetters(str) {
+  var phoneToLetterMappings = new Map();
+  _.each(str.split("\n"), function(line) {
+    if (/^;/.test(line)) { return; }
+    if (line.length == 0) { return; }
+    var parts = line.split("\t");
+    var phone = parts[0];
+    var letters = parts[1].split(",").map(function(letter) { return letter.trim(); });
+    phoneToLetterMappings.set(phone, letters);
+  });
+  return phoneToLetterMappings;
+}
+
 var pronunciations = parseCMU(
     fs.readFileSync(__dirname + "/cmudict-0.7b", {encoding: 'utf8'}));
+
+var phoneToLetterMappings = parseCMULetters(
+    fs.readFileSync(__dirname + "/cmudict-0.7b.letters", {encoding: 'utf8'}));
 
 /**
  * Count the number of syllables in a string of phones.
@@ -167,7 +183,12 @@ function stressesForWord(find) {
  */
 function syllablesForWord(find) {
   var phones = phonesForWord(find);
-  return [];
+
+  return [
+    ['ex', 'IH0 G Z'],
+    ['am', 'AE1 M'],
+    ['ple', 'P AH0 L'],
+  ];
 }
 
 

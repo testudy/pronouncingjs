@@ -1,0 +1,42 @@
+;;; 对应 cmudict-0.7b ARPABET 音素和字母映射表
+;;; \t 分割音素和字母
+
+AA	a, al, au, ear
+AE	a
+AH	u, o, ou, oo
+AO	aw, au, al, ough
+AW	ou, ow
+AY	i, y, igh, ie
+B	b, bb
+CH	ch, tch, tu
+D	d, dd, ed
+DH	th
+EH	e, ea, ai
+ER	er, ir, ur, ear, or
+EY	a, ai, ay, ea, ei, ey
+F	f, ff, ph, gh
+G	g, gg, gh, gu, gue
+HH	h, wh
+IH	i, y, ui
+IY	e, ee, ea, i, ie, ey
+JH	j, g, dge, di
+K	c, k, ck, ch, qu
+L	l, ll
+M	m, mm, mb, mn
+N	n, nn, kn, gn
+NG	ng, n
+OW	o, oa, ow, oe, ou, ough
+OY	oi, oy
+P	p, pp
+R	r, rr, wr, rh
+S	s, ss, c, sc, ps
+SH	sh, ti, ci, ssi, ch
+T	t, tt, ed
+TH	th
+UH	o, oo, ou, u, oul
+UW	o, oo, u, ue, ui, ew
+V	v, f, ph
+W	o, w, wh, u
+Y	y, i, j
+Z	z, zz, s, ss, x
+ZH	s, si, z, ge
